@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OverlayOps | Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+  <div class="site-shell checkout-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">OO</span>
+        <span>OverlayOps</span>
+      </a>
+      <nav class="topnav">
+        <a href="index.html">Back to landing page</a>
+      </nav>
+    </header>
+
+    <main class="checkout-layout">
+      <section class="checkout-main">
+        <p class="eyebrow">Checkout</p>
+        <h1>Reserve a pilot package</h1>
+        <p class="checkout-intro">
+          Reserve a pilot package for your team and capture the information needed to scope deployment, workflow fit, and rollout timing.
+        </p>
+
+        <form class="checkout-form" id="checkout-form">
+          <label>
+            Company name
+            <input type="text" name="company" placeholder="Northline Electronics" required>
+          </label>
+          <label>
+            Work email
+            <input type="email" name="email" placeholder="manager@company.com" required>
+          </label>
+          <label>
+            Team size
+            <select name="teamSize" required>
+              <option value="">Select team size</option>
+              <option>1-5 technicians</option>
+              <option>6-20 technicians</option>
+              <option>21-50 technicians</option>
+              <option>50+ technicians</option>
+            </select>
+          </label>
+          <label>
+            Primary use case
+            <select name="useCase" required>
+              <option value="">Select primary use case</option>
+              <option>PCB assembly guidance</option>
+              <option>Technician training</option>
+              <option>Quality assurance checks</option>
+              <option>Mixed lab operations</option>
+            </select>
+          </label>
+          <label>
+            What would make this pilot worth paying for?
+            <textarea name="success" rows="5" placeholder="Example: reduce orientation mistakes on a high-mix assembly line"></textarea>
+          </label>
+          <button class="button button-primary button-wide" type="submit">Submit reservation</button>
+        </form>
+
+        <div class="confirmation-card" id="confirmation-card" hidden>
+          <p class="eyebrow">Reservation captured</p>
+          <h2>Reservation received</h2>
+          <p id="confirmation-copy"></p>
+          <a class="button button-secondary" href="index.html">Return to landing page</a>
+        </div>
+      </section>
+
+      <aside class="order-panel">
+        <p class="panel-label">Selected package</p>
+        <h2 id="selected-plan">Lab Rollout</h2>
+        <p class="order-price" id="selected-price">$6,800</p>
+        <p class="order-duration" id="selected-duration">6-week validation sprint</p>
+        <ul class="order-details">
+          <li>Pilot package reservation</li>
+          <li>Deployment planning</li>
+          <li>Flexible package configuration</li>
+        </ul>
+        <div class="next-step-note">
+          <p class="panel-label">Next step</p>
+          <p>A follow-up conversation can confirm workflow scope, onboarding requirements, and success metrics for deployment.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
